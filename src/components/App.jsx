@@ -21,10 +21,13 @@ export class App extends Component {
       cont => cont.name.toLowerCase() === data.name.toLowerCase()
     );
 
-    // console.log(this.state.contacts[0].name);
+    // console.log(data);
+    // console.log(data.name.toLowerCase());
     // console.log(searchSameName);
-    if (searchSameName) {
+
+    if (searchSameName.length > 0) {
       alert(`${data.name} is already in contacts`);
+
       return;
     }
     const contact = {
@@ -44,7 +47,8 @@ export class App extends Component {
 
   getVisibleContacts = () => {
     const { contacts, filter } = this.state;
-    // console.log(this.state);
+
+    // console.log(contacts);
     return contacts.filter(contacts =>
       contacts.name.toLowerCase().includes(filter.toLowerCase())
     );

@@ -19,7 +19,7 @@ export class Form extends Component {
   //       }
 
   handleSubmit = evt => {
-    console.log(evt);
+    // console.log(evt);
     evt.preventDefault();
     // const { name, number } = evt.target;
     // if (name.length === 0 || number.length === 0) {
